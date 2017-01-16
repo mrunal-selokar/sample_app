@@ -1,8 +1,8 @@
-#gemfile for toy app
 
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
+gem 'bootstrap-sass', '3.3.6'
 gem 'sass-rails', '>= 5.0.3'
 gem 'uglifier','2.5.3'
 gem 'coffee-rails','4.1.0'
@@ -28,3 +28,5 @@ group :production do
 	gem 'pg','0.17.1'
 	gem 'rails_12factor','0.0.2'
 end
+
+
