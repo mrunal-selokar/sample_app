@@ -40,6 +40,17 @@ end
   def forget
     update_attribute(:remember_digest, nil)
   end
+  #activates an account
+  
+  def activate
+    update_attribute(:activated, true)
+    update_attribute(:activated_at, Time.zone.now)
+  end
+
+  #sends activation mail
+  def send_activation_mail
+    UserMailer.account_activation(self).deliver_now
+  end
 
   private
 
