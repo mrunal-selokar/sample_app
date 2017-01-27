@@ -55,7 +55,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
-    #confirms a logged in user
+=begin   #confirms a logged in user
     def logged_in_user
       unless  logged_in?
         store_location
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
         redirect_to login_url
       end
     end
-
+=end
     #confirms correct user
     def correct_user
       @user=User.find(params[:id])
